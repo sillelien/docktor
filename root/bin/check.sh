@@ -39,9 +39,10 @@ do
       export check service_name
       if bash -cex "$check"
       then
-        echo "PASSED CHECK"
+        echo "CHECK PASSED"
         sleep ${CHECK_INTERVAL:-60}
       else
+      echo "CHECK FAILED"
         if bash -cex "$fix"
         then
             echo "FIX RAN OKAY"
