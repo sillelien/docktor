@@ -29,7 +29,12 @@ test:
     FIX_COMMAND: "/scripts/fixes/tutum_restart.sh ${TEST_TUTUM_API_URL}"
 ```
 
+
 This checks to see if the Nginx server is running on port 80, if not it runs a pre-supplied script that restarts the container on Tutum.
+
+## Additional Commands and Resources
+
+Additional resources to a usual Docker Alpine image include the following: curl, nmap, socat, (netcat), Bash, Docker, Python, Pip. As well as these CLIs for the following services are include: Tutum, Digital Ocean, Amazon Web Services. If you have suggestions for other CLIs please let me know.
 
 [![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
 
