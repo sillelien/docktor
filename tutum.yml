@@ -1,0 +1,11 @@
+docktor:
+  image: vizzbuzz/docktor
+  links:
+    - test
+
+test:
+  image: alpine
+  command: sleep 300
+  environment:
+    CHECK_COMMAND: "ping -c 1 test; false"
+    FIX_COMMAND: "/scripts/fixes/tutum_restart.sh ${TEST_TUTUM_API_URL}"
