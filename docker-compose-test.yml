@@ -1,11 +1,11 @@
 docktor:
   build: .
   links:
-    - test
+    - sut
 
 sut:
    image: alpine
-   command: sleep 300
+   command: sleep 60
    environment:
-     CHECK_COMMAND: "ping -c 1 test"
+     CHECK_COMMAND: "ping -c 1 sut"
      FIX_COMMAND: "echo failed!"
