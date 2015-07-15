@@ -3,7 +3,7 @@ docktor:
   links:
     - test
 
- test:
+test:
    image: alpine
    command: sleep 300
    environment:
