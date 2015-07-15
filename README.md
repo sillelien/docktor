@@ -27,4 +27,14 @@ test:
 
 [![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
 
+[![Docker Registry](https://img.shields.io/docker/pulls/vizzbuzz/docktor.svg)](https://registry.hub.docker.com/u/vizzbuzz/docktor)
+
+[![GitHub License](https://img.shields.io/github/license/vizzbuzz/docktor.svg)](https://raw.githubusercontent.com/vizzbuzz/docktor/master/LICENSE)
+
+[![GitHub Issues](https://img.shields.io/github/issues/vizzbuzz/docktor.svg)](https://github.com/vizzbuzz/docktor/issues)
+    
+[![GitHub Release](https://img.shields.io/github/release/vizzbuzz/docktor.svg)](https://github.com/vizzbuzz/docktor)
+
+[![Image Layers](https://badge.imagelayers.io/vizzbuzz/docktor.svg)](https://imagelayers.io/?images=vizzbuzz/docktor:latest 'Get your own badge on imagelayers.io') 
+
 
