@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -x
+set -e
 
 
 export PATH=$PATH:/scripts/checks:/scripts/fixes
@@ -39,12 +39,19 @@ do
       export check service_name
       if bash -cex "$check"
       then
-        echo "PASSED"
+        echo "PASSED CHECK"
+        sleep ${CHECK_INTERVAL:-60}
       else
-        bash -cex "$fix"
+        if bash -cex "$fix"
+        then
+            echo "FIX RAN OKAY"
+            sleep ${CHECK_INTERVAL:-60}
+        else
+            echo "FIX FAILED"
+            sleep ${RECHECK_INTERVAL:-${CHECK_INTERVAL}}
+        fi
       fi
 
     done
-    sleep ${CHECK_INTERVAL:-60}
 done
   
