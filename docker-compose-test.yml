@@ -5,7 +5,7 @@ docktor:
 
 sut:
    image: alpine
-   command: sleep 60
+   command: sleep 120
    environment:
      CHECK_COMMAND: "ping -c 1 sut"
      FIX_COMMAND: "echo failed!"
