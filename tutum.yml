@@ -8,5 +8,5 @@ docktor:
 test:
   image: nginx
   environment:
-    CHECK_COMMAND: "curl http://${TEST_PORT_80_TCP_ADDR}:{TEST_PORT_80_TCP_PORT} | grep nginx.com"
+    CHECK_COMMAND: "curl http://${TEST_PORT_80_TCP_ADDR}:${TEST_PORT_80_TCP_PORT} | grep nginx.com"
     FIX_COMMAND: "/scripts/fixes/tutum_restart.sh ${TEST_TUTUM_API_URL}"
