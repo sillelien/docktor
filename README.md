@@ -1,5 +1,7 @@
 # Docktor
 
+[![Join the chat at https://gitter.im/vizzbuzz/docktor](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vizzbuzz/docktor?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Docktor fixes other containers, it is a [sidecar container](http://techblog.netflix.com/2014/11/prana-sidecar-for-your-netflix-paas.html) which takes actions when it's companion(s) fail(s).
 
 Get it on Docker Hub: https://registry.hub.docker.com/u/vizzbuzz/docktor
