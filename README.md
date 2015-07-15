@@ -8,7 +8,7 @@ The Docktor checks every `CHECK_INTERVAL` (default 60) seconds whether the conta
 
 The linked containers have the environmental variables set on them: `CHECK_COMMAND` and `FIX_COMMAND`. `CHECK_COMMAND` will be passed to a Bash shell for evaluation, if it exits with zero (success) then nothing happens, if it exits with non-zero (fail) then `FIX_COMMAND` is executed to try and fix the problem. Usually this will be just to restart a container etc.
 
-An example tutum.yaml is shown below and can be deployedby the button after it.
+An example tutum.yml is shown below and can be deployed by the button after it.
 
 ```yaml
 docktor:
