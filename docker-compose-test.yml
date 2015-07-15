@@ -1,0 +1,11 @@
+docktor:
+  build: .
+  links:
+    - test
+
+sut:
+   image: alpine
+   command: sleep 300
+   environment:
+     CHECK_COMMAND: "ping -c 1 test"
+     FIX_COMMAND: "echo failed!"
