@@ -1,6 +1,6 @@
 # Docktor
 
-A sidecar container to take action when it's companion(s) fail(s).
+Docktor fixes other containers, it is a sidecar container which take actions when it's companion(s) fail(s).
 
 ## Introduction
 
