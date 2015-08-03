@@ -1,4 +1,4 @@
-FROM vizzbuzz/base-alpine:0.8
+FROM sillelien/base-alpine:0.9.2
 COPY build.sh /build.sh
 RUN chmod 755 /build.sh
 RUN /build.sh
