@@ -1,10 +1,10 @@
 # Docktor
 
-[![Join the chat at https://gitter.im/vizzbuzz/docktor](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vizzbuzz/docktor?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/sillelien/docktor](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vizzbuzz/docktor?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Docktor fixes other containers, it is a [sidecar container](http://techblog.netflix.com/2014/11/prana-sidecar-for-your-netflix-paas.html) which takes actions when it's companion(s) fail(s).
 
-Get it on Docker Hub: https://registry.hub.docker.com/u/vizzbuzz/docktor
+Get it on Docker Hub: https://registry.hub.docker.com/u/sillelien/docktor
 
 ## Introduction
 
@@ -12,13 +12,13 @@ The Docktor checks every `CHECK_INTERVAL` (default 60) seconds whether the conta
 
 The linked containers have the environmental variables set on them: `CHECK_COMMAND` and `FIX_COMMAND`. `CHECK_COMMAND` will be passed to a Bash shell for evaluation, if it exits with zero (success) then nothing happens, if it exits with non-zero (fail) then `FIX_COMMAND` is executed to try and fix the problem. Usually this will be just to restart a container etc.
 
-Docktor comes with a set of scripts to make your life easier they are in /scripts/checks and /scripts/fixes - if you want to add, please issue a pull request with the scripts added to the [appropriate subdirectory](https://github.com/vizzbuzz/docktor/tree/master/root/scripts).
+Docktor comes with a set of scripts to make your life easier they are in /scripts/checks and /scripts/fixes - if you want to add, please issue a pull request with the scripts added to the [appropriate subdirectory](https://github.com/sillelien/docktor/tree/master/root/scripts).
 
 An example tutum.yml is shown below and can be deployed by the button after it.
 
 ```yaml
 docktor:
-  image: vizzbuzz/docktor
+  image: sillelien/docktor
   links:
     - test
   roles:
@@ -40,14 +40,14 @@ This checks to see if the Nginx server is running on port 80, if not it runs a p
 Additional resources to a usual Docker Alpine image include the following: curl, nmap, socat, (netcat), Bash, Docker, Python, Pip. As well as these CLIs for the following services are include: Tutum, Digital Ocean, Amazon Web Services. If you have suggestions for other CLIs please let me know.
 
 
-[![Docker Registry](https://img.shields.io/docker/pulls/vizzbuzz/docktor.svg)](https://registry.hub.docker.com/u/vizzbuzz/docktor)
+[![Docker Registry](https://img.shields.io/docker/pulls/sillelien/docktor.svg)](https://registry.hub.docker.com/u/sillelien/docktor)
 
-[![GitHub License](https://img.shields.io/github/license/vizzbuzz/docktor.svg)](https://raw.githubusercontent.com/vizzbuzz/docktor/master/LICENSE)
+[![GitHub License](https://img.shields.io/github/license/sillelien/docktor.svg)](https://raw.githubusercontent.com/sillelien/docktor/master/LICENSE)
 
-[![GitHub Issues](https://img.shields.io/github/issues/vizzbuzz/docktor.svg)](https://github.com/vizzbuzz/docktor/issues)
+[![GitHub Issues](https://img.shields.io/github/issues/sillelien/docktor.svg)](https://github.com/sillelien/docktor/issues)
     
-[![GitHub Release](https://img.shields.io/github/release/vizzbuzz/docktor.svg)](https://github.com/vizzbuzz/docktor)
+[![GitHub Release](https://img.shields.io/github/release/sillelien/docktor.svg)](https://github.com/sillelien/docktor)
 
-[![Image Layers](https://badge.imagelayers.io/vizzbuzz/docktor.svg)](https://imagelayers.io/?images=vizzbuzz/docktor:latest 'Get your own badge on imagelayers.io') 
+[![Image Layers](https://badge.imagelayers.io/sillelien/docktor.svg)](https://imagelayers.io/?images=sillelien/docktor:latest 'Get your own badge on imagelayers.io') 
 
 
