@@ -1,5 +1,5 @@
 docktor:
-  image: vizzbuzz/docktor
+  image: sillelien/docktor
   links:
     - test
   roles:
